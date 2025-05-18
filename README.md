@@ -25,18 +25,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
   Presents top-N recommendations using Apache Superset dashboards or via programmatic reporting.
 
 ---
-
-## 🎓 Who is This Project For?
-
-This project is a great fit for:
-
-- **Aspiring Data Engineers** — to demonstrate Spark-based ETL pipelines and orchestration
-- **Data Analysts** — to explore SQL-driven reporting and dashboard creation
-- **ETL Developers** — interested in building pipelines using PySpark and Hive
-- **Students & Educators** — looking for a practical, hands-on case study in big data systems
-- **Portfolio Builders** — needing a well-documented project that shows technical depth
-
----
 ## 🛠️ Tech Stack
 
 | 🛠️ Tools            | 📂 Kategori          | 🧩 Fungsi                                                                 |
@@ -50,10 +38,8 @@ This project is a great fit for:
 | **Apache Ambari** | Cluster Management | Monitoring dan manajemen cluster Hadoop dan komponennya secara visual.             |
 
 
-
 ## Data Lake Architecture
-![Deskripsi gambar](data lake architecture.png)
-
+![Deskripsi gambar](/data lake architecture.png)
 
 ## 
 - Bronze: raw CSV files in HDFS
@@ -61,8 +47,6 @@ This project is a great fit for:
 - Silver: cleaned & joined data in Parquet
 
 - Gold: model output (Top-N recommendations) in ORC/Parquet
-
-
 
 
 ## Struktur Folder
@@ -87,6 +71,18 @@ book-recommendation-system/
 │   └── airflow_dag.py
 ├── docker-compose.yml
 └── requirements.txt
+---
+
+🎓 Who is This Project For?
+
+This project is a great fit for:
+
+- **Aspiring Data Engineers** — to demonstrate Spark-based ETL pipelines and orchestration
+- **Data Analysts** — to explore SQL-driven reporting and dashboard creation
+- **ETL Developers** — interested in building pipelines using PySpark and Hive
+- **Students & Educators** — looking for a practical, hands-on case study in big data systems
+- **Portfolio Builders** — needing a well-documented project that shows technical depth
+
 ```
 ## Authors
 
