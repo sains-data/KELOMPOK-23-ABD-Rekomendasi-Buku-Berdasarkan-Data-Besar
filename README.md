@@ -25,7 +25,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
   Presents top-N recommendations using Apache Superset dashboards or via programmatic reporting.
 
 ---
-
 ## 🛠️ Tech Stack
 
 | 🛠️ Tools            | 📂 Kategori          | 🧩 Fungsi                                                                 |
@@ -39,7 +38,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
 | **Apache Ambari** | Cluster Management | Monitoring dan manajemen cluster Hadoop dan komponennya secara visual.             |
 
 
-
 ## Data Lake Architecture
 ![Deskripsi gambar](data-lake-architecture.png)
 
@@ -50,8 +48,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
 - Silver: cleaned & joined data in Parquet
 
 - Gold: model output (Top-N recommendations) in ORC/Parquet
-
-
 
 
 ## Struktur Folder
@@ -90,7 +86,6 @@ This project is a great fit for:
 - **Portfolio Builders** — needing a well-documented project that shows technical depth
 
 ---
-
 ## Authors
 
 - Mayada (121450145)
