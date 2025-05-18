@@ -71,6 +71,7 @@ book-recommendation-system/
 │   └── airflow_dag.py
 ├── docker-compose.yml
 └── requirements.txt
+```
 ---
 
 🎓 Who is This Project For?
@@ -83,7 +84,7 @@ This project is a great fit for:
 - **Students & Educators** — looking for a practical, hands-on case study in big data systems
 - **Portfolio Builders** — needing a well-documented project that shows technical depth
 
-```
+---
 ## Authors
 
 - Mayada (121450145)
