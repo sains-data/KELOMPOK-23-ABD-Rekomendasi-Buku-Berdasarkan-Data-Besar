@@ -26,17 +26,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
 
 ---
 
-## 🎓 Who is This Project For?
-
-This project is a great fit for:
-
-- **Aspiring Data Engineers** — to demonstrate Spark-based ETL pipelines and orchestration
-- **Data Analysts** — to explore SQL-driven reporting and dashboard creation
-- **ETL Developers** — interested in building pipelines using PySpark and Hive
-- **Students & Educators** — looking for a practical, hands-on case study in big data systems
-- **Portfolio Builders** — needing a well-documented project that shows technical depth
-
----
 ## 🛠️ Tech Stack
 
 | 🛠️ Tools            | 📂 Kategori          | 🧩 Fungsi                                                                 |
@@ -52,7 +41,7 @@ This project is a great fit for:
 
 
 ## Data Lake Architecture
-![Deskripsi gambar](data lake architecture.png)
+![Deskripsi gambar](data-lake-architecture.png)
 
 
 ## 
@@ -88,6 +77,20 @@ book-recommendation-system/
 ├── docker-compose.yml
 └── requirements.txt
 ```
+---
+
+🎓 Who is This Project For?
+
+This project is a great fit for:
+
+- **Aspiring Data Engineers** — to demonstrate Spark-based ETL pipelines and orchestration
+- **Data Analysts** — to explore SQL-driven reporting and dashboard creation
+- **ETL Developers** — interested in building pipelines using PySpark and Hive
+- **Students & Educators** — looking for a practical, hands-on case study in big data systems
+- **Portfolio Builders** — needing a well-documented project that shows technical depth
+
+---
+
 ## Authors
 
 - Mayada (121450145)
