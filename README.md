@@ -1,2 +1,3 @@
-# KELOMPOK-23-ABD-Rekomendasi-Buku-Berdasarkan-Data-Besar
-Discovering meaningful patterns in education through smart book recommendations powered by big data.
+# 📚 Book Recommendation System Using Data Lake Architecture
+
+This project presents a scalable book recommendation system built upon a big data processing pipeline using the Medallion architecture (Bronze–Silver–Gold). It utilizes Apache Spark for ETL and model training, Hadoop HDFS for data lake storage, Apache MLlib for collaborative filtering, and Apache Airflow for workflow orchestration. The final results are visualized through interactive dashboards powered by Apache Superset. This system is designed to demonstrate practical implementation of large-scale data engineering and machine learning workflows using open-source tools.
