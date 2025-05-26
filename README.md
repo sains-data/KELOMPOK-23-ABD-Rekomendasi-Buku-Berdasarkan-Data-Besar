@@ -269,7 +269,7 @@ book-recommendation-system/
 
 - Mayada (121450145)
 - Natasya Ega Lina Marbun (122450024)
-- Syalaisha Andini Putriansyah (22450111)
+- Syalaisha Andini Putriansyah (122450111)
 - Anwar Muslim (122450117)
 
 
