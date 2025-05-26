@@ -44,7 +44,7 @@ This repository presents an end-to-end implementation of a Book Recommendation S
 
 **Data lake architecture**
 
-![Deskripsi gambar](data-lake-architecture.png)
+![Deskripsi gambar](docs/data-lake-architecture.png)
 
 
 ## 
@@ -241,7 +241,7 @@ book-recommendation-system/
 ├── README.md
 ├── airflows
 │   ├── dags 
-│   │   └── airflow_dag.py
+│       └── airflow_dag.py
 ├── books_data/
 │   ├── books.csv
 │   ├── users.csv
