@@ -1,0 +1,153 @@
+version: '3.8'
+services:
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    environment:
+      - CLUSTER_NAME=test
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    volumes:
+      - ./hadoop/namenode:/hadoop/dfs/name
+    networks:
+      - hadoop-net
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    environment:
+      - CLUSTER_NAME=test
+    ports:
+      - "9864:9864"
+    volumes:
+      - ./hadoop/datanode:/hadoop/dfs/data
+    networks:
+      - hadoop-net
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-metastore
+    environment:
+      HIVE_METASTORE_URI: thrift://hive-metastore:9083
+    depends_on:
+      - namenode
+      - datanode
+    ports:
+      - "9083:9083"
+    networks:
+      - hadoop-net
+  hiveserver2:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hiveserver2
+    environment:
+      SERVICE: hiveserver2
+      HIVE_METASTORE_URI: thrift://hive-metastore:9083
+    depends_on:
+    - hive-metastore
+    ports:
+    - "10000:10000"
+    networks:
+    - hadoop-net
+
+  spark-master:
+    image: bde2020/spark-master:2.4.4-hadoop2.7
+    container_name: spark-master
+    ports:
+    - "8080:8080"
+    - "7077:7077"
+    environment:
+    - INIT_DAEMON_STEP=setup_spark
+    networks:
+    - hadoop-net
+ 
+  spark-worker:
+    image: bde2020/spark-worker:2.4.4-hadoop2.7
+    container_name: spark-worker
+    environment:
+    - SPARK_MASTER=spark://spark-master:7077
+    depends_on:
+    - spark-master
+    ports:
+    - "8081:8081"
+    networks:
+    - hadoop-net
+
+  hive-cli:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-cli
+    environment:
+      SERVICE: hive-cli
+    depends_on:
+      - hiveserver2
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./core-site.xml:/opt/hadoop/etc/hadoop/core-site.xml
+
+    networks:
+      - hadoop-net
+  # Hapus bagian ini dari docker-compose.yml
+  hadoop-client:
+    image: bde2020/hadoop-base:2.0.0-hadoop3.2.1-java8
+    container_name: hadoop-client
+    networks:
+    - hadoop-net
+    stdin_open: true
+    tty: true
+    command: tail -f /dev/null
+
+  postgres-metastore:
+    image: postgres:10
+    container_name: postgres-metastore
+    environment:
+      POSTGRES_DB: metastore
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hivepassword
+    volumes:
+    - ./postgres-data:/var/lib/postgresql/data
+    ports:
+    - "5432:5432"
+    networks:
+    - hadoop-net
+  airflow-postgres:
+    image: postgres:12
+    container_name: airflow-postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - airflow-db-volume:/var/lib/postgresql/data
+    networks:
+      - hadoop-net
+
+  airflow:
+    image: puckel/docker-airflow:1.10.9
+    container_name: airflow
+    restart: unless-stopped
+    ports:
+      - "8089:8080"  # Airflow UI (host:container)
+    environment:
+      - LOAD_EX=y
+      - POSTGRES_HOST=airflow-postgres
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+      - ./logs:/usr/local/airflow/logs
+      - ./data:/data
+    depends_on:
+      - airflow-postgres
+      
+    networks:
+      - hadoop-net
+networks:
+  hadoop-net:
+
+volumes:
+  hdfs_namenode:
+  hdfs_datanode:
+  superset_home:
+  postgres-metastore-data:
+  airflow-db-volume:

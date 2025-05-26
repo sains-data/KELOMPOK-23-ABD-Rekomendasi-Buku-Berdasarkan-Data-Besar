@@ -1,0 +1,299 @@
+[2025-05-21 09:57:16,824] {{scheduler_job.py:153}} INFO - Started process (PID=174) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:57:16,826] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 09:57:16,827] {{logging_mixin.py:112}} INFO - [2025-05-21 09:57:16,826] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:57:16,834] {{logging_mixin.py:112}} INFO - [2025-05-21 09:57:16,832] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 09:57:16,835] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:57:16,847] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.022 seconds
+[2025-05-21 09:58:04,898] {{scheduler_job.py:153}} INFO - Started process (PID=237) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:04,899] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 09:58:04,900] {{logging_mixin.py:112}} INFO - [2025-05-21 09:58:04,900] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:04,907] {{logging_mixin.py:112}} INFO - [2025-05-21 09:58:04,905] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 09:58:04,907] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:04,918] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.020 seconds
+[2025-05-21 09:58:52,978] {{scheduler_job.py:153}} INFO - Started process (PID=301) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:52,981] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 09:58:52,981] {{logging_mixin.py:112}} INFO - [2025-05-21 09:58:52,981] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:52,990] {{logging_mixin.py:112}} INFO - [2025-05-21 09:58:52,988] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 09:58:52,990] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:58:53,002] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.024 seconds
+[2025-05-21 09:59:41,049] {{scheduler_job.py:153}} INFO - Started process (PID=345) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:59:41,051] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 09:59:41,052] {{logging_mixin.py:112}} INFO - [2025-05-21 09:59:41,052] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:59:41,059] {{logging_mixin.py:112}} INFO - [2025-05-21 09:59:41,057] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 09:59:41,059] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 09:59:41,073] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.024 seconds
+[2025-05-21 10:00:29,128] {{scheduler_job.py:153}} INFO - Started process (PID=409) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:00:29,130] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:00:29,131] {{logging_mixin.py:112}} INFO - [2025-05-21 10:00:29,130] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:00:29,139] {{logging_mixin.py:112}} INFO - [2025-05-21 10:00:29,137] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:00:29,139] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:00:29,149] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.021 seconds
+[2025-05-21 10:01:17,205] {{scheduler_job.py:153}} INFO - Started process (PID=453) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:01:17,207] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:01:17,207] {{logging_mixin.py:112}} INFO - [2025-05-21 10:01:17,207] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:01:17,214] {{logging_mixin.py:112}} INFO - [2025-05-21 10:01:17,213] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:01:17,215] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:01:17,226] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.021 seconds
+[2025-05-21 10:02:05,275] {{scheduler_job.py:153}} INFO - Started process (PID=517) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:05,277] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:02:05,277] {{logging_mixin.py:112}} INFO - [2025-05-21 10:02:05,277] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:05,284] {{logging_mixin.py:112}} INFO - [2025-05-21 10:02:05,283] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:02:05,284] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:05,295] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.020 seconds
+[2025-05-21 10:02:53,356] {{scheduler_job.py:153}} INFO - Started process (PID=561) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:53,358] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:02:53,358] {{logging_mixin.py:112}} INFO - [2025-05-21 10:02:53,358] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:53,365] {{logging_mixin.py:112}} INFO - [2025-05-21 10:02:53,364] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:02:53,365] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:02:53,376] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.020 seconds
+[2025-05-21 10:03:41,424] {{scheduler_job.py:153}} INFO - Started process (PID=625) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:03:41,426] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:03:41,426] {{logging_mixin.py:112}} INFO - [2025-05-21 10:03:41,426] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:03:41,437] {{logging_mixin.py:112}} INFO - [2025-05-21 10:03:41,431] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:03:41,438] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:03:41,448] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.023 seconds
+[2025-05-21 10:04:29,526] {{scheduler_job.py:153}} INFO - Started process (PID=669) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:04:29,529] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:04:29,529] {{logging_mixin.py:112}} INFO - [2025-05-21 10:04:29,529] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:04:29,536] {{logging_mixin.py:112}} INFO - [2025-05-21 10:04:29,534] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:04:29,536] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:04:29,546] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.019 seconds
+[2025-05-21 10:05:17,612] {{scheduler_job.py:153}} INFO - Started process (PID=733) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:05:17,614] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:05:17,614] {{logging_mixin.py:112}} INFO - [2025-05-21 10:05:17,614] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:05:17,622] {{logging_mixin.py:112}} INFO - [2025-05-21 10:05:17,620] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:05:17,622] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:05:17,631] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.019 seconds
+[2025-05-21 10:06:05,692] {{scheduler_job.py:153}} INFO - Started process (PID=777) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:05,693] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:06:05,694] {{logging_mixin.py:112}} INFO - [2025-05-21 10:06:05,694] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:05,701] {{logging_mixin.py:112}} INFO - [2025-05-21 10:06:05,699] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:06:05,701] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:05,712] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.020 seconds
+[2025-05-21 10:06:53,784] {{scheduler_job.py:153}} INFO - Started process (PID=841) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:53,786] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:06:53,786] {{logging_mixin.py:112}} INFO - [2025-05-21 10:06:53,786] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:53,793] {{logging_mixin.py:112}} INFO - [2025-05-21 10:06:53,792] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:06:53,793] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:06:53,804] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.020 seconds
+[2025-05-21 10:07:41,862] {{scheduler_job.py:153}} INFO - Started process (PID=885) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:07:41,864] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:07:41,865] {{logging_mixin.py:112}} INFO - [2025-05-21 10:07:41,865] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:07:41,872] {{logging_mixin.py:112}} INFO - [2025-05-21 10:07:41,871] {{dagbag.py:246}} ERROR - Failed to import: /usr/local/airflow/dags/airflow_dag.py
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 243, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/usr/local/lib/python3.7/imp.py", line 171, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 696, in _load
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/airflow/dags/airflow_dag.py", line 2, in <module>
+    from airflow.operators.bash import BashOperator
+ModuleNotFoundError: No module named 'airflow.operators.bash'
+[2025-05-21 10:07:41,872] {{scheduler_job.py:1574}} WARNING - No viable dags retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:07:41,883] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.021 seconds
+[2025-05-21 10:09:49,574] {{scheduler_job.py:153}} INFO - Started process (PID=197) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:09:49,578] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:09:49,579] {{logging_mixin.py:112}} INFO - [2025-05-21 10:09:49,578] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:09:49,587] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:09:49,606] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.032 seconds
+[2025-05-21 10:10:37,635] {{scheduler_job.py:153}} INFO - Started process (PID=241) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:10:37,636] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:10:37,637] {{logging_mixin.py:112}} INFO - [2025-05-21 10:10:37,637] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:10:37,643] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:10:37,660] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:10:37,662] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:10:37,664] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.029 seconds
+[2025-05-21 10:11:25,731] {{scheduler_job.py:153}} INFO - Started process (PID=305) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:11:25,733] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:11:25,733] {{logging_mixin.py:112}} INFO - [2025-05-21 10:11:25,733] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:11:25,746] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:11:25,763] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:11:25,765] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:11:25,767] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.035 seconds
+[2025-05-21 10:12:13,816] {{scheduler_job.py:153}} INFO - Started process (PID=349) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:12:13,817] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:12:13,818] {{logging_mixin.py:112}} INFO - [2025-05-21 10:12:13,818] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:12:13,835] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:12:13,853] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:12:13,856] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:12:13,858] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.042 seconds
+[2025-05-21 10:13:01,913] {{scheduler_job.py:153}} INFO - Started process (PID=413) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:01,915] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:13:01,915] {{logging_mixin.py:112}} INFO - [2025-05-21 10:13:01,915] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:01,922] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:01,939] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:13:01,941] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:13:01,943] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.030 seconds
+[2025-05-21 10:13:50,012] {{scheduler_job.py:153}} INFO - Started process (PID=457) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:50,014] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:13:50,014] {{logging_mixin.py:112}} INFO - [2025-05-21 10:13:50,014] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:50,021] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:13:50,038] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:13:50,040] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:13:50,041] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.029 seconds
+[2025-05-21 10:14:38,082] {{scheduler_job.py:153}} INFO - Started process (PID=521) to work on /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:14:38,084] {{scheduler_job.py:1560}} INFO - Processing file /usr/local/airflow/dags/airflow_dag.py for tasks to queue
+[2025-05-21 10:14:38,084] {{logging_mixin.py:112}} INFO - [2025-05-21 10:14:38,084] {{dagbag.py:403}} INFO - Filling up the DagBag from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:14:38,092] {{scheduler_job.py:1572}} INFO - DAG(s) dict_keys(['book_recommendation_pipeline']) retrieved from /usr/local/airflow/dags/airflow_dag.py
+[2025-05-21 10:14:38,109] {{scheduler_job.py:1282}} INFO - Processing book_recommendation_pipeline
+[2025-05-21 10:14:38,111] {{scheduler_job.py:446}} INFO - Skipping SLA check for <DAG: book_recommendation_pipeline> because no tasks in DAG have SLAs
+[2025-05-21 10:14:38,113] {{scheduler_job.py:161}} INFO - Processing /usr/local/airflow/dags/airflow_dag.py took 0.031 seconds

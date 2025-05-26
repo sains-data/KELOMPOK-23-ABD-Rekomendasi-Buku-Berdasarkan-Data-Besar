@@ -1,0 +1,28 @@
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, lit, current_date, year
+
+spark = SparkSession.builder.appName("Gold_ETL").getOrCreate()
+
+# Load data Silver layer (Parquet)
+books = spark.read.parquet("hdfs://namenode:9000/data-lake/silver/books")
+users = spark.read.parquet("hdfs://namenode:9000/data-lake/silver/users")
+ratings = spark.read.parquet("hdfs://namenode:9000/data-lake/silver/ratings")
+
+# Hitung umur buku berdasarkan Year-Of-Publication
+# Jika Year-Of-Publication tidak valid, isi dengan None (null)
+current_year = 2025  # Ganti sesuai tahun sekarang atau pakai Spark fungsi year(current_date())
+books = books.withColumn("book_age", 
+    (lit(current_year) - col("Year-Of-Publication")).cast("int"))
+
+# Join ratings dengan users dan books
+features = ratings.join(users.select("user_idx", "age_int"), on="user_idx", how="inner") \
+                  .join(books.select("book_idx", "book_age"), on="book_idx", how="inner")
+
+# Ubah tipe indeks menjadi integer (untuk model ALS)
+features = features.withColumn("user_idx", col("user_idx").cast("int")) \
+                   .withColumn("book_idx", col("book_idx").cast("int")) \
+                   .withColumnRenamed("Book-Rating", "rating")
+
+# Simpan hasil fitur ke Gold Layer (Parquet)
+features.select("user_idx", "book_idx", "rating", "age_int", "book_age") \
+        .write.mode("overwrite").parquet("hdfs://namenode:9000/data-lake/gold/features")
