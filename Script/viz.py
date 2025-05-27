@@ -56,13 +56,13 @@ top_books_per_age_group = book_age_group_ratings_filtered.groupby('Age_Group').h
 print(f"\nTop {top_n_books} books per age group identified.")
 print(top_books_per_age_group)
 
-# 7. Generate visualization
+# 7. Generate and save visualization
 print("\nGenerating visualization...")
 sns.set_style("whitegrid")
 
 age_groups = top_books_per_age_group['Age_Group'].unique()
 
-# Filter out None/NaN age groups if any exist from pd.cut (shouldn't happen with right=False and good bins)
+# Filter out None/NaN age groups if any exist from pd.cut
 age_groups = [group for group in age_groups if pd.notna(group)]
 
 if not age_groups:
@@ -90,5 +90,9 @@ else:
             ax.text(width + 0.1, p.get_y() + p.get_height() / 2, f'{width:.2f}', va='center')
 
     plt.tight_layout()
-    plt.show()
-    print("Visualization generated successfully.")
+    
+    # Save the figure as a PNG file
+    output_filename = 'book_recommendations_by_age.png'
+    plt.savefig(output_filename)
+    print(f"Visualization saved successfully as {output_filename}")
+    plt.close(fig) # Close the plot to free up memory
