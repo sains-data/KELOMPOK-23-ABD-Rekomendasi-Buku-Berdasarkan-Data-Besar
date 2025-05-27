@@ -78,7 +78,8 @@ else:
         ax = axes[i]
         data = top_books_per_age_group[top_books_per_age_group['Age_Group'] == age_group].sort_values(by='avg_rating', ascending=True)
 
-        sns.barplot(x='avg_rating', y='Book-Title', data=data, palette='viridis', ax=ax)
+        # Changed palette to 'Blues' for a blue color scheme
+        sns.barplot(x='avg_rating', y='Book-Title', data=data, palette='Blues', ax=ax)
         ax.set_title(f'Age Group: {age_group}', fontsize=14)
         ax.set_xlabel('Average Book Rating', fontsize=12)
         ax.set_ylabel('Book Title', fontsize=12)
