@@ -112,58 +112,50 @@ plt.savefig(output_filename2)
 print(f"Visualization saved successfully as {output_filename2}")
 plt.close(fig2)
 
-# 9. Add visualization for Heatmap of User-Book Interaction
-print("\nGenerating visualization (Heatmap of User-Book Interaction)...")
+# 9. Add visualization for Heatmap of Average Rating by Age Group and Year of Publication
+print("\nGenerating visualization (Heatmap of Average Rating by Age Group and Year of Publication)...")
 
-# To make the heatmap manageable, let's sample a subset of users and books.
-# We'll select users who have rated at least a certain number of books,
-# and books that have received at least a certain number of ratings.
-# Then, we'll take a random sample from these filtered users/books.
+# Clean 'Year-Of-Publication'
+df_cleaned_for_heatmap = df_merged.copy() # Use a copy to avoid modifying df_merged directly if not needed elsewhere
+df_cleaned_for_heatmap['Year-Of-Publication'] = pd.to_numeric(df_cleaned_for_heatmap['Year-Of-Publication'], errors='coerce')
+df_cleaned_for_heatmap = df_cleaned_for_heatmap.dropna(subset=['Year-Of-Publication'])
+df_cleaned_for_heatmap['Year-Of-Publication'] = df_cleaned_for_heatmap['Year-Of-Publication'].astype(int)
 
-# Get users who have rated at least 20 books
-user_rating_counts = df_merged['User-ID'].value_counts()
-active_users = user_rating_counts[user_rating_counts >= 20].index
+# Filter out unreasonable years (e.g., before 1000 or after current year)
+current_year = pd.to_datetime('today').year
+df_cleaned_for_heatmap = df_cleaned_for_heatmap[(df_cleaned_for_heatmap['Year-Of-Publication'] >= 1000) & (df_cleaned_for_heatmap['Year-Of-Publication'] <= current_year)]
 
-# Get books that have been rated at least 20 times
-book_rating_counts = df_merged['ISBN'].value_counts()
-popular_books = book_rating_counts[book_rating_counts >= 20].index
+# Apply age grouping to this cleaned dataframe as well
+df_cleaned_for_heatmap['Age_Group'] = pd.cut(df_cleaned_for_heatmap['Age'], bins=bins, labels=labels, right=False)
+df_cleaned_for_heatmap = df_cleaned_for_heatmap.dropna(subset=['Age_Group']) # Drop rows where age group couldn't be determined
 
-# Filter the merged DataFrame to include only active users and popular books
-df_filtered_interaction = df_merged[
-    df_merged['User-ID'].isin(active_users) &
-    df_merged['ISBN'].isin(popular_books)
-]
+# Group by Age_Group and Year-Of-Publication to get average rating
+avg_rating_by_age_year = df_cleaned_for_heatmap.groupby(['Age_Group', 'Year-Of-Publication'])['Book-Rating'].mean().unstack()
 
-# Take a random sample of users and books from the filtered data for the heatmap
-# This prevents the heatmap from being too dense and unreadable.
-sample_users = df_filtered_interaction['User-ID'].sample(min(50, len(df_filtered_interaction['User-ID'].unique())), random_state=42).unique()
-sample_books = df_filtered_interaction['Book-Title'].sample(min(30, len(df_filtered_interaction['Book-Title'].unique())), random_state=42).unique()
+# Select a reasonable number of top years based on the number of ratings they received
+# This helps to avoid a very sparse heatmap with many years that have few ratings.
+year_counts = df_cleaned_for_heatmap['Year-Of-Publication'].value_counts()
+# Select top 20 most frequent years for the heatmap to keep it readable
+top_years_for_heatmap = year_counts.nlargest(20).index.tolist()
 
-df_heatmap_sample = df_filtered_interaction[
-    df_filtered_interaction['User-ID'].isin(sample_users) &
-    df_filtered_interaction['Book-Title'].isin(sample_books)
-]
+# Filter the pivot table to include only these top years and sort them
+avg_rating_by_age_year_filtered = avg_rating_by_age_year[top_years_for_heatmap].dropna(axis=1, how='all')
+avg_rating_by_age_year_filtered = avg_rating_by_age_year_filtered.reindex(columns=sorted(avg_rating_by_age_year_filtered.columns))
 
-if not df_heatmap_sample.empty:
-    # Create a pivot table for the heatmap
-    user_book_pivot = df_heatmap_sample.pivot_table(
-        index='User-ID',
-        columns='Book-Title',
-        values='Book-Rating'
-    )
 
+if not avg_rating_by_age_year_filtered.empty:
     fig3, ax3 = plt.subplots(figsize=(15, 10))
     # Changed cmap to 'Blues' for a blue color scheme
-    sns.heatmap(user_book_pivot, cmap='Blues', annot=False, fmt=".0f", linewidths=.5, ax=ax3)
-    ax3.set_title('Heatmap of User-Book Interactions (Sampled)', fontsize=16)
-    ax3.set_xlabel('Book Title', fontsize=12)
-    ax3.set_ylabel('User ID', fontsize=12)
+    sns.heatmap(avg_rating_by_age_year_filtered, cmap='Blues', annot=True, fmt=".1f", linewidths=.5, ax=ax3)
+    ax3.set_title('Heatmap of Average Book Rating by Age Group and Year of Publication', fontsize=16)
+    ax3.set_xlabel('Year of Publication', fontsize=12)
+    ax3.set_ylabel('Age Group', fontsize=12)
     plt.xticks(rotation=90, fontsize=8)
     plt.yticks(fontsize=8)
     plt.tight_layout()
-    output_filename3 = 'user_book_interaction_heatmap.png'
+    output_filename3 = 'avg_rating_by_age_year_heatmap.png'
     plt.savefig(output_filename3)
     print(f"Visualization saved successfully as {output_filename3}")
     plt.close(fig3)
 else:
-    print("Not enough data to generate a meaningful heatmap after sampling. Consider adjusting thresholds or sample size.")
+    print("Not enough data to generate a meaningful heatmap for average rating by age group and year of publication. Consider adjusting filters.")
