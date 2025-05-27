@@ -1,7 +1,7 @@
 
 # 📚 Book Recommendation System Using Data Lake Architecture
 
-This project presents a scalable book recommendation system built upon a big data processing pipeline using the Medallion architecture (Bronze–Silver–Gold). It utilizes Apache Spark for ETL and model training, Hadoop HDFS for data lake storage, Apache MLlib for collaborative filtering, and Apache Airflow for workflow orchestration. The final results are visualized through interactive dashboards powered by Apache Superset. This system is designed to demonstrate practical implementation of large-scale data engineering and machine learning workflows using open-source tools.
+This project presents a scalable book recommendation system built upon a big data processing pipeline using the Medallion architecture (Bronze–Silver–Gold). It utilizes Apache Spark for ETL and model training, Hadoop HDFS for data lake storage, and Apache MLlib for collaborative filtering. This system is designed to demonstrate practical implementation of large-scale data engineering and machine learning workflows using open-source tools.
 
 ## 📘 Project Overview
 
@@ -35,7 +35,6 @@ This repository presents an end-to-end implementation of a Book Recommendation S
 **Data lake architecture**
 
 ![Deskripsi gambar](docs/data-lake-architecture.png)
-
 
 ## 
 - Bronze: raw CSV files in HDFS
